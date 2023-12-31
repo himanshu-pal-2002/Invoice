@@ -9,6 +9,13 @@ class InvoiceListCreateView(generics.ListCreateAPIView):
     queryset = Invoice.objects.all()
     serializer_class = InvoiceSerializer
 
+class InvoiceDetailEntry(generics.ListCreateAPIView):
+    
+    queryset = Invoice_Detail.objects.all()
+    serializer_class = InvoiceDetailSerializer    
+
+
+
 class InvoiceDetailView(generics.RetrieveUpdateDestroyAPIView):
     
     queryset = Invoice_Detail.objects.all()
